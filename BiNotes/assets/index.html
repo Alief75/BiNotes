@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiNotes - Financial Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <header>
+            <div class="brand">
+                <img src="logo.png" alt="BiNotes Logo" class="logo">
+                <div>
+                    <h2>BiNotes</h2>
+                    <p>Catatan Keuangan Cerdas</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="wallet-card">
+            <div class="card-content">
+                <span class="card-label">Total Saldo</span>
+                <h1 id="balance">Rp 0</h1>
+                <div class="card-chip">
+                    <img src="dompet.png" alt="Dompet" class="chip-img">
+                </div>
+            </div>
+            <div class="card-details">
+                <div class="detail-box income">
+                    <i class="ri-arrow-up-circle-fill"></i>
+                    <div>
+                        <span>Pemasukan</span>
+                        <h4 id="money-plus" class="plus">+Rp 0</h4>
+                    </div>
+                </div>
+                <div class="detail-box expense">
+                    <i class="ri-arrow-down-circle-fill"></i>
+                    <div>
+                        <span>Pengeluaran</span>
+                        <h4 id="money-minus" class="minus">-Rp 0</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            
+            <div class="history-section">
+                <h3>Riwayat Transaksi</h3>
+                <ul id="list" class="list">
+                    </ul>
+                <div id="empty-state" style="display:none; text-align:center; color:#888; margin-top:20px;">
+                    <small>Belum ada transaksi.</small>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Transaksi Baru</h3>
+                <form id="form">
+                    <div class="form-group">
+                        <label>Keterangan</label>
+                        <div class="input-icon">
+                            <i class="ri-file-text-line"></i>
+                            <input type="text" id="text" placeholder="Contoh: Gaji, Makan Siang..." autocomplete="off">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Nominal <small>(Negatif (-) utk pengeluaran)</small></label>
+                        <div class="input-icon">
+                            <i class="ri-money-dollar-circle-line"></i>
+                            <input type="number" id="amount" placeholder="-50000 atau 100000">
+                        </div>
+                    </div>
+
+                    <button class="btn-submit">
+                        <i class="ri-add-line"></i> Tambah Transaksi
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

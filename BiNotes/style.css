@@ -22,6 +22,7 @@ body {
     background: radial-gradient(circle, rgba(73, 148, 236, 0.4) 40%, rgba(5, 29, 64, 0) 70%);
     z-index: -1;
     filter: blur(50px);
+    animation: breathingGlow 5s infinite;
 }
 
 .background-glow-right {
@@ -33,6 +34,7 @@ body {
     background: radial-gradient(circle, rgba(108, 76, 168, 0.3) 40%, rgba(5, 29, 64, 0) 70%);
     z-index: -1;
     filter: blur(60px);
+    animation: breathingGlow 5s infinite;
 }
 
 .container {
@@ -47,6 +49,13 @@ header {
     align-items: center;
     padding-top: 30px;
     padding-bottom: 20px;
+    animation: shine 5s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
 }
 
 .logo-container {
@@ -165,7 +174,23 @@ header {
         margin-bottom: 30px;
     }
 
-    
+    @keyframes breathingGlow {
+    0% {
+        opacity: 0.3;
+        transform: scale(1);
+        filter: blur(50px);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+        filter: blur(60px);
+    }
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+        filter: blur(50px);
+    }
+}
 
     
 }
